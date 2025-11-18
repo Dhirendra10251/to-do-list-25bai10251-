@@ -1,6 +1,9 @@
 # to-do-list-25bai10251-
 To design a simple console based Python program that helps users manage daily tasks including viewing, adding, and deleting tasks dynamically.  Theory / Concept:
-
+name : Dhirendra kumar thakur
+reg no. : 25BAI10251
+    
+    
     tasks = []
 
     def show_tasks():
