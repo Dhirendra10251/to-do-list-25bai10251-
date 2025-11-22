@@ -1,59 +1,37 @@
-# to-do-list-25bai10251-
-To design a simple console based Python program that helps users manage daily tasks including viewing, adding, and deleting tasks dynamically.  Theory / Concept:
-name : Dhirendra kumar thakur
-reg no. : 25BAI10251
-    
-    
-    tasks = []
+# CLI To-Do List Manager
 
-    def show_tasks():
-          if len(tasks) == 0:
-               print("Your to-do list is empty.")
-           else:
-               print("Your tasks:")
-               for i in range(len(tasks)):
-                    print(f"{i + 1}. {tasks[i]}")
+## INTRODUCTION 
+To design a simple console based Python program that helps users manage daily tasks including viewing, adding, and deleting tasks dynamically. <br>
+**name :** Dhirendra kumar thakur <br>
+**reg no. :** 25BAI10251
 
-    def add_task():
-         task = input("Enter a new task: ")
-         tasks.append(task)
-         print("Task added!")
+## Overview
+The CLI To-Do List Manager is a lightweight, terminal-based application designed to help users organize their day-to-day tasks. It allows users to view, add, and delete tasks efficiently. The application includes data persistence, meaning tasks are saved to a text file and retrieved automatically upon restarting the program.
 
-    def delete_task():
-         show_tasks()
-          if len(tasks) == 0:
-              return
+## Features
+* **Task Management:** Add new tasks and remove completed ones.<br>
+* **Data Persistence:** Automatically saves tasks to `todo_list.txt` so data is never lost.<br>
+* **Input Validation:** Prevents empty entries and handles invalid numeric inputs gracefully.<br>
+* **User-Friendly Interface:** clear numbered lists and an intuitive menu loop.
 
-    task_num = input("Enter the task number to delete: ")
+## Technologies/Tools Used
+* **Language:** Python 3.x
+* **Modules:** `os` (Standard Library) for file handling.
+* **Editor:** VS Code / IDLE / Any Text Editor.
 
-    if task_num.isdigit():
-        index = int(task_num) - 1
+## Steps to Install & Run
+1.  **Prerequisites:** Ensure you have Python installed on your system. You can check by running `python --version` in your terminal.<br>
+2.  **Download:** Download the `main.py` file to a local directory.<br>
+3.  **Run:** Open your terminal or command prompt, navigate to the directory, and run:
+    ```bash
+    python main.py
+    ```
+    <br>
+4.  **Data File:** On the first run, the program will automatically create a `todo_list.txt` file in the same folder to store your tasks.
 
-        if index >= 0 and index < len(tasks):
-            removed_task = tasks.pop(index)
-            print(f"Removed task: {removed_task}")
-        else:
-            print("Invalid task number.")
-    else:
-        print("Please enter a valid number.")
-        
-    while True:
-    print("\nMenu:")
-    print("1. Show tasks")
-    print("2. Add a task")
-    print("3. Delete a task")
-    print("4. Exit")
-
-    choice = input("Choose an option (1-4): ")
-
-    if choice == '1':
-        show_tasks()
-    elif choice == '2':
-        add_task()
-    elif choice == '3':
-        delete_task()
-    elif choice == '4':
-        print("Goodbye!")
-        break
-    else:
-        print("Please choose a number from 1 to 4.")
+## Instructions for Testing
+1.  **Start the App:** Run the script.<br>
+2.  **Add a Task:** Select option `2`, type "Buy Groceries", and press Enter. Verify it says "Task added!".<br>
+3.  **Verify Persistence:** Select option `4` to exit. Run the script again. Select option `1` to view tasks. "Buy Groceries" should still be there.<br>
+4.  **Delete a Task:** Select option `3`. Enter the number corresponding to "Buy Groceries". Verify it is removed.<br>
+5.  **Error Handling:** Try to delete a task using a letter (e.g., "a") or a number that doesn't exist. Verify the program catches the error and does not crash.<br>
