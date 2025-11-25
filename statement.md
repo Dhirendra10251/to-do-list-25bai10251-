@@ -7,9 +7,9 @@ There is a need for a minimalist, distraction-free tool that allows users to qui
 
 The project is limited to a Command Line Interface (CLI). It focuses on the core "CRUD" (Create, Read, Delete) functionalities.<br>
 
-**In Scope:** Adding tasks, listing tasks, deleting tasks by index, saving data to a local text file. <br>
+1.**In Scope:** Adding tasks, listing tasks, deleting tasks by index, saving data to a local text file. <br>
 
-**Out of Scope:** Graphical User Interface (GUI), deadlines/reminders, user authentication, or cloud synchronization.
+2.**Out of Scope:** Graphical User Interface (GUI), deadlines/reminders, user authentication, or cloud synchronization.
 
 ## Target Users
 1.**Developers & Sysadmins:** Users who prefer staying in the terminal environment.<br>
