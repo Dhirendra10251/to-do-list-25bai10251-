@@ -1,5 +1,3 @@
-# Project Statement
-
 ## Problem Statement
 In a fast-paced digital environment, users often get overwhelmed by complex productivity apps with too many features. 
 
